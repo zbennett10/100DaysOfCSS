@@ -16,6 +16,7 @@
                 background: -o-linear-gradient(bottom right, #43389F 0%, #4ec6ca 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43389F', endColorstr='#4ec6ca',GradientType=1 );
                 position: absolute;
+                z-index: 0;
                 top: 0;
                 left: 0;
                 right: 0;
@@ -27,11 +28,111 @@
                 color: white;
                 font-family: 'Montserrat';
             }
+
+            .numberContainer {
+                position: relative;
+                top: 10%;
+                left: 15%;
+                height: 200px;
+                width: 400px;
+            }
+
+            .oneContainer {
+                position: absolute;
+                height: 80%;
+                width: 20%;
+                left: 14%;
+                top: 10%;
+            }
+
+            .oneDiagonal {
+                background-color: white;
+                position: absolute;
+                z-index: 3;
+                height: 60px;
+                transform: rotate(45deg);
+                border-radius: 5px;
+                width: 30%;
+                top: 1%;
+                left: 16%;
+                box-shadow: 1px 2px 10px 0px black;
+            }
+
+            .oneStraight {
+                position: absolute;
+                background-color: white;
+                z-index: 4;
+                height: 98%;
+                width: 30%;
+                top: 2.5%;
+                left: 40%;
+                border-radius: 5px;
+                box-shadow: 1px 2px 10px 0px black;
+            }
+
+            .zeroContainer {
+                position: absolute;
+                height: 80%;
+                width: 55%;
+                left: 25%;
+                top: 10%;
+            }
+
+            .zero {
+                border-radius: 50%;
+                height: 60%;
+                width: 40%;
+                top: 2.5%;
+                border: 32px solid white;
+                box-shadow: 1px 2px 10px 0px black;
+            }
+
+            #zeroOne {
+                position: absolute;
+                z-index: 2;
+                left: 0%;
+            }
+
+            #zeroTwo {
+                position: absolute;
+                z-index: 1;
+                left: 58%;
+            }
+
+            .days {
+                position: absolute;
+                font-weight: bold;
+                font-size: 120px;
+                left: 28%;
+                top: 42%;
+            }
+
+            .cssChallenge {
+                position: absolute;
+                font-size: 50px;
+                opacity: .9;
+                left: 22%;
+                top: 70%;
+            }
+
+
         </style>
     </head>
     <body>
         <div class="frame">
-                Yo
+            <div class="numberContainer">
+                <div class="oneContainer">
+                    <span class="oneDiagonal"></span>
+                    <div class="oneStraight"></div>
+                </div>
+                <div class="zeroContainer">
+                    <div id="zeroOne" class="zero"></div>
+                    <div id="zeroTwo" class="zero"></div>
+                </div>
+            </div>
+
+            <div class="days">Days</div>
+            <div class="cssChallenge">CSS Challenge</div>
         </div>
     </body>
 </html>
