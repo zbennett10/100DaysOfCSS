@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            .frame {
+                background: #3FAF82;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: 600px;
+                width: 600px;
+            }
+
+            .widgetContainer {
+                background: black;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                height: 205px;
+                width: 205px;
+            }
+
+            .line {
+                background: white;
+                width: 200px;
+                height: 25px;
+                position: absolute;
+                border-radius: 7px;
+
+            }
+
+            .lineOne {
+                top: 17%;
+                left: 1%;
+
+            }
+
+            .lineTwo {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        
+            .lineThree {
+                bottom: 17%;
+                left: 1%;
+            }
+
+            .onFirstTranslate {
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                transition: all 1s;
+            }
+
+        
+
+        </style>
+    </head>
+    <body>
+        <div class="frame">
+            <div class="widgetContainer">
+                <div class="line lineOne"></div>
+                <div class="line lineTwo"></div>
+                <div class="line lineThree"></div>
+            </div>
+        </div>
+
+        <script>
+            const widget = document.querySelector('.widgetContainer');
+            const lineOne = document.querySelector('.lineOne');
+            const lineTwo = document.querySelector('.lineTwo');
+            const lineThree = document.querySelector('.lineThree');
+
+            let clickStatus = false;
+
+            widget.onclick = function() {
+                if(!clickStatus) {
+                    lineOne.classList.add('onFirstTranslate');
+                    lineThree.classList.add('onFirstTranslate');
+                }
+            }
+        </script>
+    </body>
+</html>
